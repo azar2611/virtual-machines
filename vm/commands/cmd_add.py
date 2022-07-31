@@ -21,7 +21,7 @@ def cli(instancename, instanceid, imageid, type, ipaddress):
             "InstanceId": instanceid,
             "InstanceType": {
                 "type": type,
-                "CPU": "5",
+                "CPU": type.split('.')[0][-1],
                 "os": ""
             },
             "KeyName": "ssh-key",
@@ -55,10 +55,23 @@ def cli(instancename, instanceid, imageid, type, ipaddress):
     try:
         with open('virtual_machines.json','r+') as f:
             data = json.load(f)
-            #Add new vm
-            data["Instances"].append(vm)
-            f.seek(0)
-            json.dump(data, f, indent = 4)
+            
+            #collect all instance ids 
+            vms = [None] * len(data["Instances"])
+            for instance in data["Instances"]:
+                vms.append(instance['InstanceId'])
+
+            if instanceid not in vms:    
+                #Add new vm
+                data["Instances"].append(vm)
+                f.seek(0)
+                json.dump(data, f, indent = 4)
+                
+                click.echo("You have added Virtual Machine")
+                click.echo("Name::{}, IP Address::{}, Type::{}".format(instancename, ipaddress, type))
+
+            else:
+                click.echo("Instance ID {} already present please provide unique ID".format(instanceid))
 
     except FileNotFoundError:
         logging.error("File does not exixts")

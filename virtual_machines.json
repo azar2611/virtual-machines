@@ -39,18 +39,18 @@
             "ImageId": "img-12345678911",
             "InstanceId": "i-12345678911",
             "InstanceType": {
-                "type": "type02.core",
+                "type": "type01.core",
                 "CPU": "2",
-                "os": "centos"
+                "os": "redhat"
             },
             "KeyName": "ssh-key",
-            "LaunchTime": "00/00/00 00:00:00",
+            "LaunchTime": "08/01/22 00:38:02",
             "Placement": {
                 "AvailabilityZone": "us-west-2a"
             },
             "PrivateIpAddress": "10.10.10.11",
             "State": {
-                "Name": "stopped"
+                "Name": "running"
             },
             "SubnetId": "subnet-12345678910",
             "VpcId": "vpc-12345678910",
@@ -215,7 +215,7 @@
             "InstanceId": "i-12345678916",
             "InstanceType": {
                 "type": "type07.core",
-                "CPU": "5",
+                "CPU": "7",
                 "os": ""
             },
             "KeyName": "ssh-key",
@@ -250,7 +250,7 @@
             "InstanceId": "i-12345678917",
             "InstanceType": {
                 "type": "type08.core",
-                "CPU": "5",
+                "CPU": "8",
                 "os": ""
             },
             "KeyName": "ssh-key",
@@ -285,7 +285,7 @@
             "InstanceId": "i-12345678918",
             "InstanceType": {
                 "type": "type09.core",
-                "CPU": "5",
+                "CPU": "9",
                 "os": ""
             },
             "KeyName": "ssh-key",
@@ -320,7 +320,7 @@
             "InstanceId": "i-12345678919",
             "InstanceType": {
                 "type": "type10.core",
-                "CPU": "5",
+                "CPU": "10",
                 "os": ""
             },
             "KeyName": "ssh-key",
@@ -355,7 +355,7 @@
             "InstanceId": "i-12345678920",
             "InstanceType": {
                 "type": "type09.core",
-                "CPU": "5",
+                "CPU": "9",
                 "os": ""
             },
             "KeyName": "ssh-key",
@@ -390,7 +390,7 @@
             "InstanceId": "i-12345678921",
             "InstanceType": {
                 "type": "type02.core",
-                "CPU": "5",
+                "CPU": "2",
                 "os": ""
             },
             "KeyName": "ssh-key",
@@ -425,7 +425,7 @@
             "InstanceId": "i-12345678922",
             "InstanceType": {
                 "type": "type03.core",
-                "CPU": "5",
+                "CPU": "3",
                 "os": ""
             },
             "KeyName": "ssh-key",
@@ -460,7 +460,7 @@
             "InstanceId": "i-12345678923",
             "InstanceType": {
                 "type": "type04.core",
-                "CPU": "5",
+                "CPU": "4",
                 "os": ""
             },
             "KeyName": "ssh-key",
@@ -523,6 +523,41 @@
             "Tags": {
                 "Key": "Name",
                 "Value": "instance15"
+            }
+        },
+        {
+            "ImageId": "img-12345678925",
+            "InstanceId": "i-12345678925",
+            "InstanceType": {
+                "type": "type09.core",
+                "CPU": "9",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.25",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance16"
             }
         }
     ]

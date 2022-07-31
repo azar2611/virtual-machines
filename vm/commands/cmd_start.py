@@ -37,7 +37,8 @@ def cli(type, os):
                     f.truncate()
 
                     click.echo("You have started Virtual Machine")
-                    click.echo("Name::{}, IP Address::{}, Type::{}, OS::{}".format(instance['Tags']['Value'],instance['PrivateIpAddress'],instance['InstanceType']['type'],instance['InstanceType']['os']))
+                    click.echo("Name::{}, IP Address::{}, Type::{}, OS::{}".format(instance['Tags']['Value'],instance['PrivateIpAddress'],\
+                               instance['InstanceType']['type'],instance['InstanceType']['os']))
 
                     break
                 else:
