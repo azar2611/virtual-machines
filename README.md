@@ -19,6 +19,6 @@ Python utility to list, start, stop, modify and add virtual machines.
 1. `vm list` List all virtuall machines.
 2. `vm list --running=yes` List Only running virtual machines. 
 3. `vm list --stopped=yes` List Only stopped virtual machines.
-4. `vm add `
+4. `vm add -t type01.core -n instance16 -im img-12345678915 -i i-12345678915 -ip 10.10.10.15` Add instance with InstanceId=i-12345678915
 
 
