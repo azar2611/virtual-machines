@@ -19,6 +19,8 @@ class ComplexCLI(click.MultiCommand):
             return
         return mod.cli
 
+cli = ComplexCLI(help='This tool\'s subcommands are loaded from a '
+            'plugin folder dynamically.')
 @click.command(cls=ComplexCLI)
 
 def cli():
