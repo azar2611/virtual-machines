@@ -354,7 +354,7 @@
             "ImageId": "img-12345678920",
             "InstanceId": "i-12345678920",
             "InstanceType": {
-                "type": "type01.core",
+                "type": "type09.core",
                 "CPU": "5",
                 "os": ""
             },
