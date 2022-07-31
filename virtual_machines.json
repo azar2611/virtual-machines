@@ -4,12 +4,12 @@
             "ImageId": "img-12345678910",
             "InstanceId": "i-12345678910",
             "InstanceType": {
-                "type": "type02.core",
+                "type": "type01.core",
                 "CPU": "1",
-                "os": "ubunut"
+                "os": "centos"
             },
             "KeyName": "ssh-key",
-            "LaunchTime": "0000.00.00.00.00",
+            "LaunchTime": "07/31/22 13:14:51",
             "Placement": {
                 "AvailabilityZone": "us-west-2a"
             },
@@ -39,12 +39,12 @@
             "ImageId": "img-12345678911",
             "InstanceId": "i-12345678911",
             "InstanceType": {
-                "type": "type2.large",
+                "type": "type02.core",
                 "CPU": "2",
-                "os": "ubunut"
+                "os": "centos"
             },
             "KeyName": "ssh-key",
-            "LaunchTime": "0000.00.00.00.00",
+            "LaunchTime": "07/31/22 13:14:56",
             "Placement": {
                 "AvailabilityZone": "us-west-2a"
             },
@@ -74,12 +74,12 @@
             "ImageId": "img-12345678912",
             "InstanceId": "i-12345678912",
             "InstanceType": {
-                "type": "type03.large",
+                "type": "type03.core",
                 "CPU": "3",
-                "os": ""
+                "os": "centos"
             },
             "KeyName": "ssh-key",
-            "LaunchTime": "0000.00.00.00.00",
+            "LaunchTime": "07/31/22 13:15:06",
             "Placement": {
                 "AvailabilityZone": "us-west-2a"
             },
@@ -109,18 +109,18 @@
             "ImageId": "img-12345678913",
             "InstanceId": "i-12345678913",
             "InstanceType": {
-                "type": "type2.large",
+                "type": "type04.core",
                 "CPU": "4",
                 "os": "ubunut"
             },
             "KeyName": "ssh-key",
-            "LaunchTime": "0000.00.00.00.00",
+            "LaunchTime": "00/00/00 00:00:00",
             "Placement": {
                 "AvailabilityZone": "us-west-2a"
             },
             "PrivateIpAddress": "10.10.10.13",
             "State": {
-                "Name": "running"
+                "Name": "stopped"
             },
             "SubnetId": "subnet-12345678910",
             "VpcId": "vpc-12345678910",
@@ -144,18 +144,18 @@
             "ImageId": "img-12345678914",
             "InstanceId": "i-12345678914",
             "InstanceType": {
-                "type": "type05.large",
+                "type": "type05.core",
                 "CPU": "5",
-                "os": ""
+                "os": "centos"
             },
             "KeyName": "ssh-key",
-            "LaunchTime": "0000.00.00.00.00",
+            "LaunchTime": "00/00/00 00:00:00",
             "Placement": {
                 "AvailabilityZone": "us-west-2a"
             },
             "PrivateIpAddress": "10.10.10.14",
             "State": {
-                "Name": "running"
+                "Name": "stopped"
             },
             "SubnetId": "subnet-12345678910",
             "VpcId": "vpc-12345678910",
@@ -173,6 +173,356 @@
             "Tags": {
                 "Key": "Name",
                 "Value": "Instance05"
+            }
+        },
+        {
+            "ImageId": "img-12345678915",
+            "InstanceId": "i-12345678915",
+            "InstanceType": {
+                "type": "type06.core",
+                "CPU": "6",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.15",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance06"
+            }
+        },
+        {
+            "ImageId": "img-12345678916",
+            "InstanceId": "i-12345678916",
+            "InstanceType": {
+                "type": "type07.core",
+                "CPU": "5",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.16",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance07"
+            }
+        },
+        {
+            "ImageId": "img-12345678917",
+            "InstanceId": "i-12345678917",
+            "InstanceType": {
+                "type": "type08.core",
+                "CPU": "5",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.17",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance08"
+            }
+        },
+        {
+            "ImageId": "img-12345678918",
+            "InstanceId": "i-12345678918",
+            "InstanceType": {
+                "type": "type09.core",
+                "CPU": "5",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.18",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance09"
+            }
+        },
+        {
+            "ImageId": "img-12345678919",
+            "InstanceId": "i-12345678919",
+            "InstanceType": {
+                "type": "type10.core",
+                "CPU": "5",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.19",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance10"
+            }
+        },
+        {
+            "ImageId": "img-12345678920",
+            "InstanceId": "i-12345678920",
+            "InstanceType": {
+                "type": "type01.core",
+                "CPU": "5",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.20",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance11"
+            }
+        },
+        {
+            "ImageId": "img-12345678921",
+            "InstanceId": "i-12345678921",
+            "InstanceType": {
+                "type": "type02.core",
+                "CPU": "5",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.21",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance12"
+            }
+        },
+        {
+            "ImageId": "img-12345678922",
+            "InstanceId": "i-12345678922",
+            "InstanceType": {
+                "type": "type03.core",
+                "CPU": "5",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.22",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance13"
+            }
+        },
+        {
+            "ImageId": "img-12345678923",
+            "InstanceId": "i-12345678923",
+            "InstanceType": {
+                "type": "type04.core",
+                "CPU": "5",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.23",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance14"
+            }
+        },
+        {
+            "ImageId": "img-12345678924",
+            "InstanceId": "i-12345678924",
+            "InstanceType": {
+                "type": "type05.core",
+                "CPU": "5",
+                "os": ""
+            },
+            "KeyName": "ssh-key",
+            "LaunchTime": "00/00/00 00:00:00",
+            "Placement": {
+                "AvailabilityZone": "us-west-2a"
+            },
+            "PrivateIpAddress": "10.10.10.24",
+            "State": {
+                "Name": "stopped"
+            },
+            "SubnetId": "subnet-12345678910",
+            "VpcId": "vpc-12345678910",
+            "Architecture": "arm64",
+            "Hypervisor": "xen",
+            "RootDeviceName": "/dev/sda1",
+            "RootDeviceType": "ebs",
+            "RootDeviceSize": "100GB",
+            "SecurityGroups": [
+                {
+                    "GroupName": "test-security-group",
+                    "GroupId": "sg-12345678910"
+                }
+            ],
+            "Tags": {
+                "Key": "Name",
+                "Value": "instance15"
             }
         }
     ]

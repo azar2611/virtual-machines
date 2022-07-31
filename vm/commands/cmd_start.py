@@ -10,9 +10,10 @@ def cli(type, os):
 
     """Start virtual machine (--type and --os required check help)"""
 
+    no_running=None
     now = datetime.now()
     current_time = now.strftime("%D %H:%M:%S")
-    print("Current Time =", current_time)
+    
 
     with open('virtual_machines.json','r+') as f:
         data = json.load(f)
@@ -20,9 +21,12 @@ def cli(type, os):
         for instance in data['Instances']:
             if instance['State']['Name'] == 'stopped':
 
+                no_running = False
+
                 instance['State']['Name'] = 'running'
                 instance['InstanceType']['type'] = type
                 instance['InstanceType']['os'] = os
+                instance['LaunchTime'] = current_time
 
                 f.seek(0)
                 json.dump(data, f, indent=4)
@@ -32,7 +36,10 @@ def cli(type, os):
                 click.echo("Name::{}, IP Address::{}, Type::{}, OS::{}".format(instance['Tags']['Value'],instance['PrivateIpAddress'],instance['InstanceType']['type'],instance['InstanceType']['os']))
 
                 break
-
-            
-        click.echo("Virtual Machine NOT Available")
+            else:
+                no_running = True
+        
+        if no_running == True:
+            click.echo("Virtual Machine NOT Available!!!")
+                
 
