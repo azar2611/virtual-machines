@@ -15,10 +15,10 @@ Python utility to list, start, stop, modify and add virtual machines.
 5. `pip install .`
 6. `vm --help`
 
-## Examples
-1. `vm list`
+## Examples/testcases
+1. `vm list` List all virtuall machines.
 2. `vm list --running=yes`
 3. `vm list --stopped=yes`
-4. 
+4. `vm `
 
 
