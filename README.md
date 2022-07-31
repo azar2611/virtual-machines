@@ -1,6 +1,6 @@
 # virtual-machines
 
-Python utility to list, start, stop, modify, add virtual machines.
+Python utility to list, start, stop, modify and add virtual machines.
 
 ## Prerequisite
 1. Installed python3
@@ -8,7 +8,8 @@ Python utility to list, start, stop, modify, add virtual machines.
 3. Installed vene
 
 ## How to Install
-1. `python3 -m vene /path/to/new/vietual/environment`
-2. `source /path/to/new/vietual/environment/bin/activate`
+1. `python3 -m vene /path/to/new/vietual/environment For e.g python3 -m venev python3-vene`
+2. `source /path/to/new/vietual/environment/bin/activate For e.g source python3-vene/bin/activate`
+3. `git clone `
 
 
