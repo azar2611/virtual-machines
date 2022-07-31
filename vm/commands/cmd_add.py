@@ -1,19 +1,21 @@
 from datetime import datetime
 import click
 import json
+import logging
 
 @click.command()
 @click.option("-t", "--type", required=True, help="How many core you need for e.g type1.large = 1 core, type.large = 2 core etc")
-@click.option("-n", "--instancename", required=True, help="OS you want ubunut/centos/redhat")
-@click.option("-im", "--imageid", required=True, help="OS you want ubunut/centos/redhat")
-@click.option("-i", "--instanceid", required=True, help="OS you want ubunut/centos/redhat")
-@click.option("-ip", "--ipaddress", required=True, help="OS you want ubunut/centos/redhat")
+@click.option("-n", "--instancename", required=True, help="Instance Name e.g instance10")
+@click.option("-im", "--imageid", required=True, help="Image id for e.g img-12345678910")
+@click.option("-i", "--instanceid", required=True, help="Instance id for e.g i-12345678910")
+@click.option("-ip", "--ipaddress", required=True, help="IP address of machine for e.g 10.10.10.12")
 
 
 
 def cli(instancename, instanceid, imageid, type, ipaddress):
 
-    """Start virtual machine (--type and --os required check help)"""
+    """Add virtual machine (--type, --instancename, imageid, instanceid, ipaddress required check help)"""
+    #vm json block
     vm = {
             "ImageId": imageid,
             "InstanceId": instanceid,
@@ -50,8 +52,16 @@ def cli(instancename, instanceid, imageid, type, ipaddress):
             }
         }
 
-    with open('virtual_machines.json','r+') as f:
-        data = json.load(f)
-        data["Instances"].append(vm)
-        f.seek(0)
-        json.dump(data, f, indent = 4)
+    try:
+        with open('virtual_machines.json','r+') as f:
+            data = json.load(f)
+            #Add new vm
+            data["Instances"].append(vm)
+            f.seek(0)
+            json.dump(data, f, indent = 4)
+
+    except FileNotFoundError:
+        logging.error("File does not exixts")
+
+    
+    

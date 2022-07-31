@@ -44,13 +44,13 @@
                 "os": "centos"
             },
             "KeyName": "ssh-key",
-            "LaunchTime": "07/31/22 13:14:56",
+            "LaunchTime": "00/00/00 00:00:00",
             "Placement": {
                 "AvailabilityZone": "us-west-2a"
             },
             "PrivateIpAddress": "10.10.10.11",
             "State": {
-                "Name": "running"
+                "Name": "stopped"
             },
             "SubnetId": "subnet-12345678910",
             "VpcId": "vpc-12345678910",
@@ -109,18 +109,18 @@
             "ImageId": "img-12345678913",
             "InstanceId": "i-12345678913",
             "InstanceType": {
-                "type": "type04.core",
+                "type": "type03.core",
                 "CPU": "4",
-                "os": "ubunut"
+                "os": "centos"
             },
             "KeyName": "ssh-key",
-            "LaunchTime": "00/00/00 00:00:00",
+            "LaunchTime": "07/31/22 19:13:47",
             "Placement": {
                 "AvailabilityZone": "us-west-2a"
             },
             "PrivateIpAddress": "10.10.10.13",
             "State": {
-                "Name": "stopped"
+                "Name": "running"
             },
             "SubnetId": "subnet-12345678910",
             "VpcId": "vpc-12345678910",

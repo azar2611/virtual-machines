@@ -10,18 +10,23 @@ def cli(type, instanceid):
 
     """Modify virtual machine (Only --type modify  --instanceid required check help)"""    
 
-    with open('virtual_machines.json','r+') as f:
-        data = json.load(f)
+    try:
+        with open('virtual_machines.json','r+') as f:
+            data = json.load(f)
 
-        for instance in data['Instances']:
-            if instance['InstanceId'] == instanceid:
-                instance['InstanceType']['type'] = type
+            for instance in data['Instances']:
+                if instance['InstanceId'] == instanceid:
+                    #modify instance type.
+                    instance['InstanceType']['type'] = type
 
-                f.seek(0)
-                json.dump(data, f, indent=4)
-                f.truncate()
+                    f.seek(0)
+                    json.dump(data, f, indent=4)
+                    f.truncate()
 
-                click.echo("You have modified Virtual Machine")
-                click.echo("Name::{}, Type::{}".format(instance['Tags']['Value'],instance['InstanceType']['type']))
+                    click.echo("You have modified Virtual Machine")
+                    click.echo("Name::{}, Type::{}".format(instance['Tags']['Value'],instance['InstanceType']['type']))
 
-                break
+                    break
+
+    except FileNotFoundError:
+        logging.error("File does not exixts")
