@@ -2,7 +2,7 @@
 
 Python utility to list, start, stop, modify, add virtual machines.
 
-##P rerequisite
+## Prerequisite
 1. Installed python3
 2. Updated pip
 3. Installed vene
