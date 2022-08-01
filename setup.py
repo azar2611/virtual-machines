@@ -1,5 +1,6 @@
 from setuptools import find_packages, setup
 
+#collect requirements
 def read_requirements():
     with open("requirements.txt", "r") as req:
         content = req.read()
@@ -7,6 +8,7 @@ def read_requirements():
 
     return requirements
 
+#setup utility
 setup(
     name="vm",
     version="1.0",

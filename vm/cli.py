@@ -2,7 +2,8 @@ import os
 import click
 
 class ComplexCLI(click.MultiCommand):
-
+    
+    #list command by removinf cmd_ and .py
     def list_commands(self, ctx):
         commands = []
         commands_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), "commands"))
@@ -11,7 +12,7 @@ class ComplexCLI(click.MultiCommand):
                 commands.append(filename.replace("cmd_", "").replace(".py", ""))
         commands.sort()
         return commands
-
+    #get commands
     def get_command(self, ctx, name):
         try:
             mod = __import__("vm.commands.cmd_{}".format(name), None, None, ["cli"])
@@ -19,8 +20,6 @@ class ComplexCLI(click.MultiCommand):
             return
         return mod.cli
 
-cli = ComplexCLI(help='This tool\'s subcommands are loaded from a '
-            'plugin folder dynamically.')
 @click.command(cls=ComplexCLI)
 
 def cli():
